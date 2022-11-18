@@ -1,11 +1,12 @@
 {
-  "name": "contact-card",
+  "name": "client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run node server.js"
+    "build": "webpack --mode development",
+    "dev": "webpack-dev-server",
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/JayWhiteBuffalo/.contact-card/issues"
   },
-  "homepage": "https://github.com/JayWhiteBuffalo/.contact-card#readme"
+  "homepage": "https://github.com/JayWhiteBuffalo/.contact-card#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2"
+  }
 }

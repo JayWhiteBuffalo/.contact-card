@@ -14,3 +14,5 @@ const newContactButton = document.getElementById("new-contact");
 newContactButton.addEventListener('click', event => {
  toggleForm()
 })
+
+module.exports = 'form' 
