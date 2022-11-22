@@ -1,6 +1,6 @@
 // Import modules
 import {toggleForm, clearForm} from  "./form";
-import {postDb, getDb, initDb} from "./database";
+import {postDb, getDb, initDb, deleteDb} from "./database";
 import {fetchCards} from './cards';
   // Import CSS files
   import "../css/index.css";
@@ -48,6 +48,7 @@ window.addEventListener('load', function () {
       // Toggles the submit button back to POST functionality
     submitBtnToUpdate = false;
   }
+
   
   // Clear form
   clearForm();
@@ -56,4 +57,11 @@ window.addEventListener('load', function () {
   // Reload the DOM
   fetchCards();
   });
-
+  window.deleteCard = (e) => {
+    // Grabs the id from the button element attached to the contact card.
+  let id = parseInt(e.id);
+  // Delete the card
+  deleteDb(id);
+      // Reload the DOM
+      fetchCards();
+      };
