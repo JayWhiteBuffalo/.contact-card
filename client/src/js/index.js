@@ -13,6 +13,13 @@ import Logo from '../images/logo.png';
 import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
 
+//Register the service worker
+if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js');
+  })};
+
 //to insert the images into the page
 window.addEventListener('load', function () {
     initDb();
